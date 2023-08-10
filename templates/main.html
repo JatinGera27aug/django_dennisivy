@@ -1,0 +1,17 @@
+<!-- creating a wrapper around all of our templates -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualityStudy</title>
+</head>
+<body>
+
+    <!-- to be displayed on top of every page, thus above block tag -->
+    {% include 'navbar.html' %}   
+    {% block content %}
+    <!-- content of all other templates will be b/w this tag -->
+    {% endblock content %}
+</body>
+</html>

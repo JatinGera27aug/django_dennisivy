@@ -15,7 +15,26 @@
 
     {% block content %}
     <h1>HOME TEMPLATE</h1>
-    {% endblock content %}
+    
+
+<div>
+
+    <div>
+        {% for room in rooms %}
+        <div>
+            <h5>{{room.id}}--<a href="{% url 'room' room.id %}">{{room.name}}</h5></a>
+            <!-- /room/{{room.id}} ki jgh ab wali url -->
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}
+
+<!-- sab chize endblock content ke andar hi honi chaiye -->
+
+
 </body>
 </html>
 

@@ -30,6 +30,10 @@ class Room(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True, editable=False)   #inital time stamp hi store rhegi
 
+
+    class Meta:
+        ordering = ['-updated', '-created']  # newest room will be last
+        # but opp when -updated
     def __str__(self):
         return self.name
     

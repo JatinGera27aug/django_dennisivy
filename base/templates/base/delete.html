@@ -1,0 +1,15 @@
+<!-- gonna be complememt template -->
+<!-- will be used for all delete purposes -->
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form method = "POST" action="">
+    {% csrf_token %}
+    <p>ARE you sure you want to delete  mf "{{obj}}"?</p>
+    <a href="{{request.META.HTTP_REFERER}}">Go back</a>  <!--back to previous page onlu-->
+
+    <input type="Submit" value="Confirm"/>
+</form>
+
+{% endblock content %}

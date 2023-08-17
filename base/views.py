@@ -25,6 +25,7 @@ def home(request):
     rooms = Room.objects.filter(topic__name__icontains=q)   
     # icontains ka use filter krne ke liye, ki kuch letter bhi ho to bhi filter krke select krel
     # like title mein nhi, par desc mein bhi to wo check kr lega
+    # i means it is not case sensitive
     topics = Topic.objects.all()
 
     context = {'rooms':rooms, 'topics': topics}  # isko link kiya home.html se sidebar case

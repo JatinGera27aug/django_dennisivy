@@ -5,6 +5,7 @@ from . import views
 
 #idhar ham saaman/request le rhe hain
 urlpatterns=[
+    path('login/', views.loginPage, name="login"),
     path('', views.home, name="home"),
     path('room/<str:pk>', views.room, name="room"), #pointing to views of base
     

@@ -2,5 +2,14 @@
     <h1>logo</h1>
 </a>
 
+<form method="GET" action="{% url 'home' %}">  <!--will always get back to rooms page(filtered waal) no matter where am i-->
+
+    <input type="text" name="q" placeholder="Search rooms">
+    <!-- this above one for letting user search manuallu from search  -->
+    <!-- with submit, we have to click button
+    but with text, we can do hit enter -->
+</form>
+
+<a href="{% url 'login' %}">LOGIN</a>
 <hr>
 

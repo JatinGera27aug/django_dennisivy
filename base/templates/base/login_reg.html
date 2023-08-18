@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="enter username">
+         
+        <label >Password:</label>
+        <input type="password" name="passowrd" placeholder="enter passowrd">
+        <!-- if value likhe name ki jagah to wo pre filled ho jati -->
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+{% endblock content %}

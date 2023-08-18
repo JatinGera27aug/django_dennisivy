@@ -9,7 +9,15 @@
 <body>
 
     <!-- to be displayed on top of every page, thus above block tag -->
-    {% include 'navbar.html' %}   
+    {% include 'navbar.html' %}
+    
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li >{{message}}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
     {% block content %}
     <!-- content of all other templates will be b/w this tag -->
     {% endblock content %}
